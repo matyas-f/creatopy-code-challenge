@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #__next {
+    @apply flex flex-col h-full min-h-screen antialiased;
+  }
+}
+
+@layer utilities {
+  .button {
+    @apply flex items-center h-10 px-4 font-semibold transition-all duration-500 bg-black rounded-md shadow-lg cursor-pointer focus:outline-none ring-offset-2 ring-offset-indigo-400 focus:ring-2 text-gray-50 hover:bg-gray-800;
+  }
+
+  .input {
+    @apply h-10 px-3 transition-all duration-500 rounded-md shadow-lg focus:outline-none ring-offset-2 ring-offset-indigo-400 focus:ring-2;
+  }
+
+  .link {
+    @apply font-semibold underline transition-all duration-500 focus:outline-none ring-offset-2 ring-offset-indigo-400 focus:ring-2 hover:opacity-90;
+  }
+
+  .disabled {
+    @apply cursor-not-allowed pointer-events-none opacity-20;
+  }
+}
